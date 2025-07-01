@@ -39,8 +39,8 @@ export default function FlightsAccordion() {
                   </div>
                 </div>
                 <div className="flex items-center gap-7">
-                  <div className="flex flex-col">
-                    <span className="font-semibold text-[1.1rem]">
+                  <div className="flex flex-col max-md:hidden">
+                    <span className="font-semibold text-[1.1rem] max-md:text-[0.9rem]">
                       {Math.floor(leg.durationInMinutes / 60)} hr{" "}
                       {leg.durationInMinutes % 60} min
                     </span>
@@ -48,11 +48,11 @@ export default function FlightsAccordion() {
                       {leg.origin.displayCode}-{leg.destination.displayCode}
                     </span>
                   </div>
-                  <span className="text-[1.1rem]">
+                  <span className="text-[1.1rem] max-md:hidden">
                     {leg.stopCount === 0 ? "Nonstop" : `${leg.stopCount} stop`}
                   </span>
-                  <div className="flex flex-col">
-                    <span className="font-semibold text-[1.1rem]">
+                  <div className="flex flex-col max-md:hidden">
+                    <span className="font-semibold text-[1.1rem] max-md:text-[0.9rem]">
                       {flight?.eco?.ecoContenderDelta?.toFixed(0)}KG CO2e
                     </span>
                     <span className="text-[0.9rem]">
